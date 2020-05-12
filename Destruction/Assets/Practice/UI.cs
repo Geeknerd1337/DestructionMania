@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+//WIP
+
 public class UI : MonoBehaviour
 {
-  public Text text;
-  public Transform player;
+  public Text Score, info;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,6 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      text.text = player.transform.position.z.ToString();
+      
     }
 }
