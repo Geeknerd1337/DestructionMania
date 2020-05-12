@@ -28,15 +28,24 @@ public class Shatter : MonoBehaviour
 
     public void Obliviate()
     {
-        GameObject g = Instantiate(destroyedObject);
-        g.transform.position = transform.position;
-        g.transform.rotation = transform.rotation;
-        Rigidbody[] rbs = g.GetComponentsInChildren<Rigidbody>();
-        foreach (Rigidbody body in rbs)
+        if (!destroyed)
         {
-            body.velocity = rb.velocity;
+            GameObject g = Instantiate(destroyedObject);
+            g.transform.position = transform.position;
+            g.transform.rotation = transform.rotation;
+            Rigidbody[] rbs = g.GetComponentsInChildren<Rigidbody>();
+            foreach (Rigidbody body in rbs)
+            {
+                body.velocity = rb.velocity;
+            }
+            GameObject snd = Instantiate(breakSound);
+            snd.GetComponent<AudioSource>().pitch = breakPitch;
+            snd.transform.position = transform.position;
+            Destroy(snd, 4f);
+
+            destroyed = true;
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 
     public void Explode()
@@ -69,23 +78,10 @@ public class Shatter : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.relativeVelocity.magnitude > 8 && !destroyed)
+        if (collision.relativeVelocity.magnitude > 8)
         {
-            destroyed = true;
-            GameObject g = Instantiate(destroyedObject);
-            g.transform.position = transform.position;
-            g.transform.rotation = transform.rotation;
-            Rigidbody[] rbs = g.GetComponentsInChildren<Rigidbody>();
-            foreach (Rigidbody body in rbs)
-            {
-                body.velocity = rb.velocity;
-            }
-            GameObject snd = Instantiate(breakSound);
-            snd.GetComponent<AudioSource>().pitch = breakPitch;
-            snd.transform.position = transform.position;
-            Destroy(snd, 4f);
-
-            Destroy(gameObject);
+            
+            Obliviate();
         }
 
         if (collision.relativeVelocity.magnitude > 2 && !destroyed && sound != null)
