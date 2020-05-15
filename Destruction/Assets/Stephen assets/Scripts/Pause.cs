@@ -1,18 +1,57 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //variables
+    public static bool isPaused = false;
+    public GameObject pauseMenuUi;
 
-    // Update is called once per frame
+
+    //Checks if you pressed the pause button. If you do, it pauses. Might change it to FixedUpdate later, not sure.
     void Update()
     {
-        
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (isPaused) 
+            {
+                Resume();
+            }
+            else
+            {
+                Paused();
+            }
+        }
+    }
+
+
+    //Rseumes the game.
+    void Resume()
+    {
+        pauseMenuUi.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+
+    //Pauses the game.
+    void Paused()
+    {
+        pauseMenuUi.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    // Goes to main menu.
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("");
+    }
+
+    //Quits game from the menu.
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
