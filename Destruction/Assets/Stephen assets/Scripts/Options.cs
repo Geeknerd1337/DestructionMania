@@ -10,7 +10,7 @@ public class Options : MonoBehaviour
     //variables
      public GameObject options;
     public AudioMixer audioMixer;
-
+    public AudioSource BGM;
     public Dropdown resolutionDropdown;
     Resolution[] resolutions;
 
@@ -19,7 +19,9 @@ public class Options : MonoBehaviour
     //Start menu for getting resolutions.
     void Start()
     {
+
         
+        BGM.Play();
 
         resolutions = Screen.resolutions;
 
@@ -80,6 +82,8 @@ public void setResolution (int reoslutionIndex)
 
     public void goBack()
     {
+        Destroy(options);
+        Destroy(BGM);
         options.SetActive(false);
     }
 

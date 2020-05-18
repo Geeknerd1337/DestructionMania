@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/My assets/TestingGrounds.unity
     guid: 45e7ffaf4b1d1154b899004d0e59c449
+  - enabled: 1
+    path: Assets/Stephen assets/Scenes/Menu.unity
+    guid: b559f792d8d255b4a82b1dd17a5cc559
+  - enabled: 1
+    path: Assets/Stephen assets/Scenes/Options.unity
+    guid: 695eea77f327b9b4799bb9a5944842a4
   m_configObjects: {}

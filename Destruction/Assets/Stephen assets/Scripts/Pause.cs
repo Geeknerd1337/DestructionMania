@@ -15,7 +15,7 @@ public class Pause : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            if (isPaused) 
+            if (isPaused)
             {
                 Resume();
             }
@@ -28,7 +28,7 @@ public class Pause : MonoBehaviour
 
 
     //Rseumes the game.
-    void Resume()
+    public void Resume()
     {
         pauseMenuUi.SetActive(false);
         Time.timeScale = 1f;
@@ -44,14 +44,15 @@ public class Pause : MonoBehaviour
     }
 
     // Goes to main menu.
-    public void LoadMenu()
+    public void Settings()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Options",LoadSceneMode.Additive);
     }
 
-    //Quits game from the menu.
-    public void QuitGame()
+    public void MainMenu()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Menu");
     }
+
+   
 }
