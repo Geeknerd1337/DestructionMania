@@ -6,53 +6,57 @@ using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
     //variables
-    public static bool isPaused = false;
+    public static bool gameIsPaused;
     public GameObject pauseMenuUi;
 
 
-    //Checks if you pressed the pause button. If you do, it pauses. Might change it to FixedUpdate later, not sure.
+    void Start()
+    {
+        pauseMenuUi.SetActive(false);
+    }
+
+
     void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Paused();
-            }
+            gameIsPaused = !gameIsPaused;
+            PauseGame();
+        }
+
+    }
+
+
+
+    // Pauses Game.
+    void PauseGame()
+    {
+        if (gameIsPaused)
+        {
+            Time.timeScale = 0f;
+            AudioListener.pause = true;
+            pauseMenuUi.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            AudioListener.pause = false;
+            pauseMenuUi.SetActive(false);
         }
     }
 
-
-    //Rseumes the game.
-    public void Resume()
-    {
-        pauseMenuUi.SetActive(false);
-        Time.timeScale = 1f;
-        isPaused = false;
-    }
-
-    //Pauses the game.
-    void Paused()
-    {
-        pauseMenuUi.SetActive(true);
-        Time.timeScale = 0f;
-        isPaused = true;
-    }
-
-    // Goes to main menu.
+    // Goes to settings.
     public void Settings()
     {
-        SceneManager.LoadScene("Options",LoadSceneMode.Additive);
+        SceneManager.LoadScene("Options", LoadSceneMode.Additive);
     }
 
+
+    // Goes to Main menu
     public void MainMenu()
     {
         SceneManager.LoadScene("Menu");
     }
 
-   
+
 }

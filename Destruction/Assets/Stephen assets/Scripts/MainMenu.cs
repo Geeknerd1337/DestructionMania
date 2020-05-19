@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
 
+public GameObject OptionsUI;
 
-    
+
 public void PlayGame()
 {
 SceneManager.LoadScene("");
@@ -20,8 +22,11 @@ public void QuitGame()
 
 public void Options()
 {
-    SceneManager.LoadScene("Options",LoadSceneMode.Additive);
+    SceneManager.LoadSceneAsync("Options",LoadSceneMode.Additive);
     
 }
+
+
+
 
 }
