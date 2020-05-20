@@ -8,18 +8,23 @@ public class Options : MonoBehaviour
 {
 
     //variables
-     public GameObject options;
+     public GameObject optionsMenu;
     public AudioMixer audioMixer;
-
+    public AudioSource BGM;
     public Dropdown resolutionDropdown;
     Resolution[] resolutions;
+
+    public Slider slider;
 
    
 
     //Start menu for getting resolutions.
     void Start()
     {
-        
+        optionsMenu.SetActive(true);
+
+        slider.value = PlayerPrefs.GetFloat("Volume", 0.75f);
+        BGM.Play();
 
         resolutions = Screen.resolutions;
 
@@ -61,7 +66,7 @@ public void setResolution (int reoslutionIndex)
     //For controlling volume.
     public void SetVolume(float Vol)
     {
-        audioMixer.SetFloat("Volume", Vol);
+        audioMixer.SetFloat("Volume", Mathf.Log10(Vol) * 20);
 
     }
 
@@ -80,7 +85,8 @@ public void setResolution (int reoslutionIndex)
 
     public void goBack()
     {
-        options.SetActive(false);
+        optionsMenu.SetActive(false);
+        BGM.Stop();
     }
 
 }
