@@ -31,7 +31,10 @@ public class SledgeHead : MonoBehaviour
             }
             else
             {
-                other.attachedRigidbody.AddForce(500f * transform.forward);
+                if (other.attachedRigidbody != null)
+                {
+                    other.attachedRigidbody.AddForce(500f * transform.forward);
+                }
             }
             
 
