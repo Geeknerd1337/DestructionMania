@@ -11,6 +11,7 @@ public class Shatter : MonoBehaviour
     private bool destroyed;
     private AudioSource sound;
     public GameObject breakSound;
+    public ParticleSystem partSystem;
     public float breakPitch;
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,10 @@ public class Shatter : MonoBehaviour
     {
         if (!destroyed)
         {
+            GameObject snd = Instantiate(breakSound);
+            snd.GetComponent<AudioSource>().pitch = breakPitch;
+            snd.transform.position = transform.position;
+            Destroy(snd, 4f);
             GameObject g = Instantiate(destroyedObject);
             g.transform.position = transform.position;
             g.transform.rotation = transform.rotation;
@@ -38,10 +43,14 @@ public class Shatter : MonoBehaviour
             {
                 body.velocity = rb.velocity;
             }
-            GameObject snd = Instantiate(breakSound);
-            snd.GetComponent<AudioSource>().pitch = breakPitch;
-            snd.transform.position = transform.position;
-            Destroy(snd, 4f);
+
+
+            if(partSystem != null)
+            {
+                partSystem.transform.SetParent(null);
+                partSystem.Play();
+                Destroy(partSystem.gameObject, 10f);
+            }
 
             destroyed = true;
             Destroy(gameObject);
