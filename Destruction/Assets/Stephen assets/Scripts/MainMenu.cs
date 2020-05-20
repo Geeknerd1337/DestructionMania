@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
 
-public GameObject OptionsUI;
+public string LeveltoLoad, Settings;
 
+
+public Scenefader scenefader;
 
 public void PlayGame()
 {
-SceneManager.LoadScene("");
+    scenefader.Fadeto(LeveltoLoad);
 }
 
 
@@ -22,7 +24,7 @@ public void QuitGame()
 
 public void Options()
 {
-    SceneManager.LoadSceneAsync("Options",LoadSceneMode.Additive);
+    scenefader.Fadeto(Settings);
     
 }
 

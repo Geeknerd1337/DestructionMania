@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Stephen assets/Scenes/Menu.unity
     guid: b559f792d8d255b4a82b1dd17a5cc559
   - enabled: 1
-    path: Assets/Stephen assets/Scenes/Options.unity
+    path: Assets/Stephen assets/Scenes/Settings.unity
     guid: 695eea77f327b9b4799bb9a5944842a4
   m_configObjects: {}
