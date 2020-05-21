@@ -516,7 +516,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3147053194679882779}
         m_MethodName: Settings
         m_Mode: 1
         m_Arguments:
@@ -577,7 +577,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 29.5
+  m_fontSize: 29.05
   m_fontSizeBase: 23.41
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -842,7 +842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0da1353829e4cb4d91387c92c93c1f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeveltoLoad: Settings
   scenefader: {fileID: 1203034795}
 --- !u!1 &3147053194679882780
 GameObject:
@@ -1103,8 +1102,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Settings
+      - m_Target: {fileID: 3147053194679882779}
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1164,7 +1163,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 29.5
+  m_fontSize: 29.05
   m_fontSizeBase: 23.41
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1287,8 +1286,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Settings
+      - m_Target: {fileID: 3147053194679882779}
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1367,7 +1366,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 29.5
+  m_fontSize: 29.05
   m_fontSizeBase: 23.41
   m_fontWeight: 400
   m_enableAutoSizing: 1

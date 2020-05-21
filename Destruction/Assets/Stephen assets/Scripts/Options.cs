@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Options : MonoBehaviour
 {
@@ -85,8 +86,7 @@ public void setResolution (int reoslutionIndex)
 
     public void goBack()
     {
-        optionsMenu.SetActive(false);
-        BGM.Stop();
+       SceneManager.LoadScene("Menu");
     }
 
 }

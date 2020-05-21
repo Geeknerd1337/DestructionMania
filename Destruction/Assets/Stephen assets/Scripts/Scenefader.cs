@@ -16,7 +16,7 @@ public class Scenefader : MonoBehaviour
     {
         StartCoroutine(FadeIn());
     }
-
+    // Fades into levels
     IEnumerator FadeIn()
     {
         float t = 1f;
@@ -31,11 +31,14 @@ public class Scenefader : MonoBehaviour
     }
 
 
-
+// This is to fade into level you loaded. Doesn't work right now.
+/*
     public void Fadeto(string scene)
     {
         StartCoroutine(FadeOut(scene));
     }
+
+    */
     IEnumerator FadeOut(string c)
     {
         float t = 0f;
@@ -48,7 +51,7 @@ public class Scenefader : MonoBehaviour
             yield return 0;
         }
 
-        SceneManager.LoadScene(c);
+    //    SceneManager.LoadScene(c, LoadSceneMode.Additive);
 
     }
 

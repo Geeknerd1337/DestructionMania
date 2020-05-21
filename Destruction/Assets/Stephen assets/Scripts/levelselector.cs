@@ -9,7 +9,7 @@ public class levelselector : MonoBehaviour
 
     public void Select(string levelName)
     {
-        scenefader.Fadeto(levelName);
+       // scenefader.Fadeto(levelName);
     }
 
 }

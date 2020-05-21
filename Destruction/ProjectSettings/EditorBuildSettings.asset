@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Stephen assets/Scenes/Settings.unity
     guid: 695eea77f327b9b4799bb9a5944842a4
+  - enabled: 1
+    path: Assets/Stephen assets/Scenes/Pause.unity
+    guid: 276e760932801e346bfa20828f9131d3
+  - enabled: 1
+    path: Assets/Stephen assets/Scenes/LevelSelect.unity
+    guid: f6c50f7107088194a8b56a511dbd6e66
   m_configObjects: {}

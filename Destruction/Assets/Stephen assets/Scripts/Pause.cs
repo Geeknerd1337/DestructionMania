@@ -23,6 +23,10 @@ public class Pause : MonoBehaviour
             gameIsPaused = !gameIsPaused;
             PauseGame();
         }
+        else
+        {
+            ResumeGame();
+        }
 
     }
 
@@ -37,26 +41,23 @@ public class Pause : MonoBehaviour
             AudioListener.pause = true;
             pauseMenuUi.SetActive(true);
         }
-        else
-        {
-            Time.timeScale = 1;
-            AudioListener.pause = false;
-            pauseMenuUi.SetActive(false);
-        }
+
+
     }
 
-    // Goes to settings.
-    public void Settings()
+    // Resumes Game.
+  public  void ResumeGame()
     {
-        SceneManager.LoadScene("Options", LoadSceneMode.Additive);
+        Time.timeScale = 1;
+        AudioListener.pause = false;
+        pauseMenuUi.SetActive(false);
     }
 
-
-    // Goes to Main menu
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
+// Goes to Main menu
+public void MainMenu()
+{
+    SceneManager.LoadScene("Menu");
+}
 
 
 }

@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
 
-public string LeveltoLoad, Settings;
+//public string LeveltoLoad, Settings;
 
 
 public Scenefader scenefader;
 
 public void PlayGame()
 {
-    scenefader.Fadeto(LeveltoLoad);
+    SceneManager.LoadScene("LevelSelect");
 }
 
 
@@ -22,9 +22,9 @@ public void QuitGame()
     Application.Quit();
 }
 
-public void Options()
+public void Settings()
 {
-    scenefader.Fadeto(Settings);
+    SceneManager.LoadScene("Settings");
     
 }
 
