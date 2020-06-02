@@ -4,199 +4,103 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Parallax_Building_Sides
   m_Shader: {fileID: 4800000, guid: 963bc3c6f4b8c2f4c8db108f28a07575, type: 3}
   m_ShaderKeywords: _FACADETEXTURE_ON
   m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: _Back
-      second:
+    - _Back:
         m_Texture: {fileID: 2800000, guid: 123306b02e5cc314186cc4b7b00cc05b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Ceileing
-      second:
+    - _Ceileing:
         m_Texture: {fileID: 2800000, guid: 63bb90049cec6ac479388e696ef377d4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Ceiling
-      second:
+    - _Ceiling:
         m_Texture: {fileID: 2800000, guid: 1d90ad99875b3cf4a8fadae6c7225db7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _FacadeAlbedo
-      second:
+    - _FacadeAlbedo:
         m_Texture: {fileID: 2800000, guid: 2b8f0780fef09d44a8603f5d452c2d63, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _FacadeSmoothness
-      second:
+    - _FacadeSmoothness:
         m_Texture: {fileID: 2800000, guid: 287e0edacb2bafd4cb5f0932536026ed, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Floor
-      second:
+    - _Floor:
         m_Texture: {fileID: 2800000, guid: 6d4c2362b588b0747af877613b166400, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Props
-      second:
+    - _Props:
         m_Texture: {fileID: 2800000, guid: e17c19fee7d6ad042a243d1751e2dc27, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _TextureSample1
-      second:
+    - _TextureSample1:
         m_Texture: {fileID: 2800000, guid: e5e660bd44fcb5d498761b934c5f5f4e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _TextureSample2
-      second:
+    - _TextureSample2:
         m_Texture: {fileID: 2800000, guid: e5e660bd44fcb5d498761b934c5f5f4e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Wall
-      second:
+    - _Wall:
         m_Texture: {fileID: 2800000, guid: 123306b02e5cc314186cc4b7b00cc05b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _texcoord
-      second:
+    - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: _BackWallTexTiling
-      second: 0.295
-    - first:
-        name: _BackWallTexTilling
-      second: 0.41
-    - first:
-        name: _BackWallTile
-      second: 2
-    - first:
-        name: _CeilingTexTiling
-      second: 1
-    - first:
-        name: _CeilingTexTilling
-      second: 1
-    - first:
-        name: _CeilingTile
-      second: 2
-    - first:
-        name: _DisableFacade
-      second: 0
-    - first:
-        name: _DisableFacadeTexture
-      second: 0
-    - first:
-        name: _FacadeSmoothnessValue
-      second: 0.558
-    - first:
-        name: _FacadeTexture
-      second: 1
-    - first:
-        name: _FacadeTiling
-      second: 1
-    - first:
-        name: _Float0
-      second: -1.57
-    - first:
-        name: _Float1
-      second: -1.57
-    - first:
-        name: _Float2
-      second: 3.28
-    - first:
-        name: _FloorTexTiling
-      second: 0.3
-    - first:
-        name: _FloorTexTilling
-      second: 1
-    - first:
-        name: _FloorTile
-      second: 2
-    - first:
-        name: _GlassSmoothness
-      second: 12.36
-    - first:
-        name: _GlassSmoothnessMultiplier
-      second: 9.79
-    - first:
-        name: _Keyword1
-      second: 1
-    - first:
-        name: _PropLayerToggle
-      second: 1
-    - first:
-        name: _PropsTexTiling
-      second: 0.295
-    - first:
-        name: _PropsTexTilling
-      second: 0.41
-    - first:
-        name: _RoomIntensity
-      second: 1.8
-    - first:
-        name: _RoomTile
-      second: 1
-    - first:
-        name: _Smoothness
-      second: 0
-    - first:
-        name: _SmoothnessValue
-      second: 1
-    - first:
-        name: _SwitchPlane
-      second: 0
-    - first:
-        name: _TogglePropLayer
-      second: 0
-    - first:
-        name: _ToggleSwitch0
-      second: 0
-    - first:
-        name: _UseFacadeTexture
-      second: 0
-    - first:
-        name: _WallTile
-      second: 2
-    - first:
-        name: _WalltexTiling
-      second: 0.295
-    - first:
-        name: _WalltexTilling
-      second: 0.41
-    - first:
-        name: __dirty
-      second: 0
+    - _BackWallTexTiling: 0.295
+    - _BackWallTexTilling: 0.41
+    - _BackWallTile: 2
+    - _CeilingTexTiling: 1
+    - _CeilingTexTilling: 1
+    - _CeilingTile: 2
+    - _DisableFacade: 0
+    - _DisableFacadeTexture: 0
+    - _FacadeSmoothnessValue: 0.558
+    - _FacadeTexture: 1
+    - _FacadeTiling: 1
+    - _Float0: -1.57
+    - _Float1: -1.57
+    - _Float2: 3.28
+    - _FloorTexTiling: 0.3
+    - _FloorTexTilling: 1
+    - _FloorTile: 2
+    - _GlassSmoothness: 12.36
+    - _GlassSmoothnessMultiplier: 9.79
+    - _Keyword1: 1
+    - _PropLayerToggle: 1
+    - _PropsTexTiling: 0.295
+    - _PropsTexTilling: 0.41
+    - _RoomIntensity: 1.8
+    - _RoomTile: 1
+    - _Smoothness: 0
+    - _SmoothnessValue: 1
+    - _SwitchPlane: 0
+    - _TogglePropLayer: 0
+    - _ToggleSwitch0: 0
+    - _UseFacadeTexture: 0
+    - _WallTile: 2
+    - _WalltexTiling: 0.295
+    - _WalltexTilling: 0.41
+    - __dirty: 0
     m_Colors:
-    - first:
-        name: _PositionOffsetXYZroomsWprops
-      second: {r: 3.12, g: 0.36, b: 2.48, a: 1}
-    - first:
-        name: _RoomColorTint
-      second: {r: 0.61618733, g: 0.7909081, b: 0.9632353, a: 0}
-    - first:
-        name: _RoomsXYZPropsW
-      second: {r: 0.295, g: 0.59, b: 0.195, a: 0.295}
-    - first:
-        name: _Vector0
-      second: {r: 0.93, g: 1, b: 0, a: 0}
+    - _PositionOffsetXYZroomsWprops: {r: 3.12, g: 0.36, b: 2.48, a: 1}
+    - _RoomColorTint: {r: 0.61618733, g: 0.7909081, b: 0.9632353, a: 0}
+    - _RoomsXYZPropsW: {r: 0.295, g: 0.59, b: 0.195, a: 1}
+    - _Vector0: {r: 0.93, g: 1, b: 0, a: 0}

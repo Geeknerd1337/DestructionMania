@@ -12,6 +12,7 @@ ModelImporter:
     100012: Roads
     100014: //RootNode
     100016: Blocks_000
+    100018: Buildings_003
     400000: Blocks
     400002: Blocks_001
     400004: Blocks_002
@@ -21,6 +22,7 @@ ModelImporter:
     400012: Roads
     400014: //RootNode
     400016: Blocks_000
+    400018: Buildings_003
     2100000: BuildingMat
     2100002: unnamed
     2100004: Material
@@ -33,6 +35,7 @@ ModelImporter:
     2300010: Buildings_002
     2300012: Roads
     2300014: Blocks_000
+    2300016: Buildings_003
     3300000: Blocks
     3300002: Blocks_001
     3300004: Blocks_002
@@ -41,6 +44,7 @@ ModelImporter:
     3300010: Buildings_002
     3300012: Roads
     3300014: Blocks_000
+    3300016: Buildings_003
     4300000: Buildings_002
     4300002: Buildings_001
     4300004: Roads
@@ -49,6 +53,7 @@ ModelImporter:
     4300010: Buildings
     4300012: Blocks
     4300014: Blocks_000
+    4300016: Buildings_003
     7400000: Default Take
     9500000: //RootNode
     2186277476908879412: ImportLogs
