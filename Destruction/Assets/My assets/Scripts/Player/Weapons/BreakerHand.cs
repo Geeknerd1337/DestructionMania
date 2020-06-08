@@ -36,7 +36,9 @@ public class BreakerHand : Weapon
                 g.GetComponent<Breaker>().myShatter = target;
                 g.transform.parent = target.transform;
                 Debug.Log(target.name);
+                charges--;
             }
         }
+        
     }
 }

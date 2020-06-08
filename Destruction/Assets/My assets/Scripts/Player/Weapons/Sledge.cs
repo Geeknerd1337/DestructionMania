@@ -36,10 +36,17 @@ public class Sledge : Weapon
     void Swing()
     {
         animator.Play("SledgePrepare");
+        
     }
 
     public void PlaySound()
     {
         sound.Play();
+    }
+
+    public void DepleteCharges()
+    {
+        charges--;
+        Debug.Log("Hello");
     }
 }

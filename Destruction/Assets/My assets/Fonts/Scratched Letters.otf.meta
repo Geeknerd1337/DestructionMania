@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: eb54f6b402c18f048a3f05d865cb4055
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Scratched Letters
+  fontNames:
+  - Scratched Letters
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: ea6ce31794169414eb32a2f23c7fce69, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

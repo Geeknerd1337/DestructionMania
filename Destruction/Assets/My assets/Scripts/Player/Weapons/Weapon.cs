@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
 
-    public int quantity = 0;
+    public int charges = 0;
     public float range = 10f;
     public Camera fpsCam;
     public LayerMask lm;
@@ -25,4 +25,7 @@ public class Weapon : MonoBehaviour
     {
         
     }
+
+
+
 }

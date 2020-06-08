@@ -32,6 +32,7 @@ public class RebarLauncher : Weapon
         spinpart.Play();
         collectPart.Play();
         GetComponent<AudioSource>().Play();
+        
     }
 
     void FireProjectile()
@@ -41,5 +42,10 @@ public class RebarLauncher : Weapon
         g.transform.rotation = projectilePoint.rotation;
         g.GetComponent<Rigidbody>().AddForce(g.transform.forward * 4000f);
        
+    }
+
+    public void DepleteCharges()
+    {
+        charges--;
     }
 }
