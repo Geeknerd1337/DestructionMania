@@ -13,12 +13,14 @@ public class Shatter : MonoBehaviour
     public GameObject breakSound;
     public ParticleSystem partSystem;
     public float breakPitch;
+    public LevelManager manager;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         destroyed = false;
         sound = GetComponent<AudioSource>();
+        manager = FindObjectOfType<LevelManager>();
     }
 
     // Update is called once per frame
@@ -53,6 +55,7 @@ public class Shatter : MonoBehaviour
             }
 
             destroyed = true;
+            manager.graceTimer = 0;
             Destroy(gameObject);
         }
     }

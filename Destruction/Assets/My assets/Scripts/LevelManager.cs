@@ -16,6 +16,12 @@ public class LevelManager : MonoBehaviour
     public Slider slide;
     public float slideSpd;
 
+
+    public float graceTime;
+    public float graceTimer;
+    private bool started;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +40,18 @@ public class LevelManager : MonoBehaviour
     {
         HandleWeaponScrolling();
         UpdateUI();
+
+        if (!started)
+        {
+            if(CalculateSlider() > 0)
+            {
+                started = true;
+            }
+        }
+        else
+        {
+            graceTimer += Time.deltaTime;
+        }
     }
 
     void UpdateUI()
