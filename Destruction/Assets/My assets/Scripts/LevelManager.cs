@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class LevelManager : MonoBehaviour
 {
@@ -22,6 +23,15 @@ public class LevelManager : MonoBehaviour
     private bool started;
 
 
+    [Header("Success and Fail States")]
+    public GameObject failState;
+    public GameObject successState;
+
+    public FirstPersonController fps;
+
+    private bool ended;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +42,10 @@ public class LevelManager : MonoBehaviour
             w.gameObject.SetActive(false);
         }
         levelWeapons[index].gameObject.SetActive(true);
+
+        failState.SetActive(false);
+        successState.SetActive(false);
+        fps = FindObjectOfType<FirstPersonController>();
 
     }
 
@@ -50,7 +64,16 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            graceTimer += Time.deltaTime;
+            graceTimer += Time.deltaTime;   
+
+            if(graceTimer > graceTime)
+            {
+                if (!ended)
+                {
+
+                    ended = true;
+                }
+            }
         }
     }
 

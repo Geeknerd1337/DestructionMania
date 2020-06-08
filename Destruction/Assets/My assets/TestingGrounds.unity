@@ -22006,8 +22006,11 @@ MonoBehaviour:
   shatteredObjects: []
   slide: {fileID: 130316810}
   slideSpd: 40
-  graceTime: 10
+  graceTime: 8
   graceTimer: 0
+  failState: {fileID: 1684082980}
+  successState: {fileID: 964545567}
+  fps: {fileID: 0}
 --- !u!4 &1541421543
 Transform:
   m_ObjectHideFlags: 0
@@ -29033,7 +29036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1684082981
 RectTransform:
   m_ObjectHideFlags: 0
