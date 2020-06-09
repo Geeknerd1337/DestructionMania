@@ -26,6 +26,7 @@ public class LevelManager : MonoBehaviour
     [Header("Success and Fail States")]
     public GameObject failState;
     public GameObject successState;
+    public GameObject mainState;
 
     public FirstPersonController fps;
 
@@ -52,7 +53,11 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleWeaponScrolling();
+
+        if (!ended)
+        {
+            HandleWeaponScrolling();
+        }
         UpdateUI();
 
         if (!started)
@@ -64,15 +69,48 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            graceTimer += Time.deltaTime;   
+            if (!ended) {
+                graceTimer += Time.deltaTime;
 
-            if(graceTimer > graceTime)
-            {
-                if (!ended)
+
+                if (graceTimer > graceTime)
                 {
+                    mainState.SetActive(false);
+                    foreach (Weapon w in levelWeapons)
+                    {
+                        w.gameObject.SetActive(false);
+                    }
+                    fps.canMove = false;
+                    if (CalculateSlider() > 0.8f)
+                    {
+                        successState.SetActive(true);
+                        successState.GetComponent<EndScore>().scoreTarget = Mathf.Round(CalculateSlider() * 10000f);
+                        successState.GetComponent<EndScore>().startScore = true;
+                        successState.GetComponent<EndScore>().endSlideValue = CalculateSlider();
 
+                    }
+                    else
+                    {
+                        failState.SetActive(true);
+                    }
                     ended = true;
                 }
+
+                if(CalculateSlider() >= 1f)
+                {
+                    mainState.SetActive(false);
+                    foreach (Weapon w in levelWeapons)
+                    {
+                        w.gameObject.SetActive(false);
+                    }
+                    fps.canMove = false;
+                    successState.SetActive(true);
+                    successState.GetComponent<EndScore>().scoreTarget = Mathf.Round(CalculateSlider() * 10000f);
+                    successState.GetComponent<EndScore>().startScore = true;
+                    successState.GetComponent<EndScore>().endSlideValue = CalculateSlider();
+                    ended = true;
+                }
+
             }
         }
     }
@@ -134,5 +172,15 @@ public class LevelManager : MonoBehaviour
         }
         return f / shatteredObjects.Length;
 
+    }
+
+    public float GetTotalCharges()
+    {
+        float f = 0;
+        foreach(Weapon w in levelWeapons)
+        {
+            f += w.charges;
+        }
+        return f;
     }
 }
