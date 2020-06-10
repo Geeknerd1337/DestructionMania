@@ -59,5 +59,10 @@ public void MainMenu()
     SceneManager.LoadScene("Menu");
 }
 
+public void Quit()
+{
+    Application.Quit();
+}
+
 
 }
